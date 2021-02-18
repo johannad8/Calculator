@@ -1,6 +1,9 @@
 /** Basic css-stylings **/
 html {
   box-sizing: border-box;
+  font-size: 150%;
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 *,
@@ -10,6 +13,12 @@ html {
 }
 
 body {
+  /*background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);*/
+  background: radial-gradient(circle, rgba(237,145,194,1) 0%, rgba(148,187,233,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   margin: 0;
 }
 
@@ -93,3 +102,43 @@ button:focus {
 }
 
 /*** Kiddo calculator stylings ***/
+
+.container {
+  max-width: 20em;
+  border: 1px solid red;
+}
+
+.calculator {
+  max-width: 15em;
+  margin: 2em auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+}
+
+.calculator__display {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: #FFF;
+  font-size: 1.5em;
+  padding: 0.5em 0.8em;
+  text-align: right;
+}
+
+.calculator__keys {
+  background-color: lightslategray;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Stylings here effects every divs inside calculator__keys' block */
+.calculator__keys > * {
+  position: relative;
+  text-align: center;
+  padding: 1em;
+  background-color: #FFF;
+}
+
+footer {
+  text-align: center;
+}
